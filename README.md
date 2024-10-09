@@ -28,20 +28,9 @@
 <pre>
    ssh-keygen -t rsa  
 </pre>
-  - La clef va se généré dans le dossier saisie ou par default dans (`/root/.ssh`)
-    <pre>
-      +--[ED25519 256]--+
-|      ..o==o    |
-|    . +*+o*+    |
-|   . +o.*.o+    |
-|    .o. = o     |
-|    . o S +     |
-|     . o =      |
-|      o o       |
-|       + .      |
-|      . o       |
-+-----------------+
-    </pre>
+- Lors de (`Enter passphrase (empty for no passphrase):`) il faut créér une phrase de passe afin de renforcer la sécurité de la connexion au serveur
+  - Si quelqu’un obtient un accès non autorisé à la clé privée, il doit toujours connaître la phrase de passe pour l’utiliser.  
+- La clef va se généré dans le dossier saisie ou par default dans (`/root/.ssh`)
 - Pour la transferer sur le serveur ssh on utilise la commande :
 <pre>
     ssh-copy-id username@remote_server
