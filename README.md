@@ -31,18 +31,6 @@
 - Lors de (`Enter passphrase (empty for no passphrase):`) il faut créér une phrase de passe afin de renforcer la sécurité de la connexion au serveur
   - Si quelqu’un obtient un accès non autorisé à la clé privée, il doit toujours connaître la phrase de passe pour l’utiliser.  
 - La clef va se généré dans le dossier saisie ou par default dans (`/root/.ssh`)
-  <pre>The key&apos;s randomart image is:
-+---[RSA 3072]----+
-|    o.. .+.+.+ . |
-| . . o  . *.* =  |
-|o..   .. . % = . |
-|oo    oo  * X o  |
-|o    oo S  E *   |
-|. . o oo  o o    |
-| o o =...        |
-|  . ..o.         |
-|      .          |
-+----[SHA256]-----+</pre>
 - Pour la transferer sur le serveur ssh on utilise la commande :
 <pre>
     ssh-copy-id username@remote_server
