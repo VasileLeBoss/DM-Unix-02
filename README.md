@@ -67,19 +67,16 @@ https://blog.garamotte.net/posts/2018/01/07/fr-limit-brute-force-attacks-on-the-
 ## Processus 
 
 ### 2.1 Etude des processus UNIX
-- `ps -eF` pour afficher les processus tournant
-<pre>UID          PID    PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
-root           1       0  0 42221 13568   8 09:36 ?        00:00:02 /sbin/init
-root           2       0  0     0     0   1 09:36 ?        00:00:00 [kthreadd]
-root           3       2  0     0     0   0 09:36 ?        00:00:00 [rcu_gp]
-root           4       2  0     0     0   0 09:36 ?        00:00:00 [rcu_par_gp]
-root           5       2  0     0     0   0 09:36 ?        00:00:00 [slub_flushwq]
-root           6       2  0     0     0   0 09:36 ?        00:00:00 [netns]
-root           8       2  0     0     0   0 09:36 ?        00:00:00 [kworker/0:0H-events_highpri]
-root          10       2  0     0     0   0 09:36 ?        00:00:00 [mm_percpu_wq]
-root          11       2  0     0     0   0 09:36 ?        00:00:00 [rcu_tasks_kthread]
-root          12       2  0     0     0   0 09:36 ?        00:00:00 [rcu_tasks_rude_kthread]
-root          13       2  0     0     0   0 09:36 ?        00:00:00 [rcu_tasks_trace_kthread]
-root          14       2  0     0     0   0 09:36 ?        00:00:00 [ksoftirqd/0]
-root          15       2  0     0     0   4 09:36 ?        00:00:00 [rcu_preempt]
+- `ps -aux` pour afficher les processus tournant
+
+<pre>USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  0.1 168884 13568 ?        Ss   09:36   0:02 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    09:36   0:00 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I&lt;   09:36   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I&lt;   09:36   0:00 [rcu_par_gp]
+root           5  0.0  0.0      0     0 ?        I&lt;   09:36   0:00 [slub_flushwq]
+root           6  0.0  0.0      0     0 ?        I&lt;   09:36   0:00 [netns]
+root           8  0.0  0.0      0     0 ?        I&lt;   09:36   0:00 [kworker/0:0H-events_highpri]
+root          10  0.0  0.0      0     0 ?        I&lt;   09:36   0:00 [mm_percpu_wq]
+root          11  0.0  0.0      0     0 ?        I    09:36   0:00 [rcu_tasks_kthread]
 </pre>
