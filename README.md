@@ -24,7 +24,8 @@
    
 ### 1.2 Authentification par clef / Génération de clefs
 
-- Pour généré une clef public sur la machine hote on utilise la commande :
+- Pour généré une clef privé et public sur la machine hote on utilise la commande :
 <pre>
    ssh-keygen -t rsa  
 </pre>
+<p>La clef va se généré dans le dossier saisie ou par default dans (`/root/.ssh`)</p>
