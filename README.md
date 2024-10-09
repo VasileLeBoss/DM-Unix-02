@@ -67,11 +67,19 @@ https://blog.garamotte.net/posts/2018/01/07/fr-limit-brute-force-attacks-on-the-
 ## Processus 
 
 ### 2.1 Etude des processus UNIX
-- `ps a` pour afficher les processus tournant
-<pre>    PID TTY      STAT   TIME COMMAND
-   1705 tty1     Ss     0:00 /bin/login -p --
-   1834 tty1     S+     0:00 -bash
-   2189 pts/0    Ss+    0:00 -bash
-   2228 pts/1    Ss     0:00 -bash
-   2285 pts/1    R+     0:00 ps a
+- `ps -eF` pour afficher les processus tournant
+<pre>UID          PID    PPID  C    SZ   RSS PSR STIME TTY          TIME CMD
+root           1       0  0 42221 13568   8 09:36 ?        00:00:02 /sbin/init
+root           2       0  0     0     0   1 09:36 ?        00:00:00 [kthreadd]
+root           3       2  0     0     0   0 09:36 ?        00:00:00 [rcu_gp]
+root           4       2  0     0     0   0 09:36 ?        00:00:00 [rcu_par_gp]
+root           5       2  0     0     0   0 09:36 ?        00:00:00 [slub_flushwq]
+root           6       2  0     0     0   0 09:36 ?        00:00:00 [netns]
+root           8       2  0     0     0   0 09:36 ?        00:00:00 [kworker/0:0H-events_highpri]
+root          10       2  0     0     0   0 09:36 ?        00:00:00 [mm_percpu_wq]
+root          11       2  0     0     0   0 09:36 ?        00:00:00 [rcu_tasks_kthread]
+root          12       2  0     0     0   0 09:36 ?        00:00:00 [rcu_tasks_rude_kthread]
+root          13       2  0     0     0   0 09:36 ?        00:00:00 [rcu_tasks_trace_kthread]
+root          14       2  0     0     0   0 09:36 ?        00:00:00 [ksoftirqd/0]
+root          15       2  0     0     0   4 09:36 ?        00:00:00 [rcu_preempt]
 </pre>
