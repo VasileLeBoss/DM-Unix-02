@@ -20,4 +20,11 @@
     - Incovénients :  
   - Forced-commands-only : Permet le login root avec une clef d'autentification public (Uniquement si l'option 'command' a été spécifiée)
     - Avantages :
-    - Incovénients : 
+    - Incovénients :
+   
+### 1.2 Authentification par clef / Génération de clefs
+
+- Pour généré une clef public sur la machine hote on utilise la commande :
+<pre>
+   ssh-keygen -t rsa  
+</pre>
