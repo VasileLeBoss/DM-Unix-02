@@ -37,6 +37,20 @@
 </pre> 
 ### 1.3 Authentification par clef / Connection serveur
 - Pour aller dans le dossier /.ssh/ on utilise la commande
-  <pre>
-    cd ~/.ssh/
-  </pre>
+<pre>
+  cd ~/.ssh/
+</pre>
+
+### 1.4 Authentification par clef : depuis la machine hote
+<pre>
+  ssh -i ./maclef root@10.20.0.136
+</pre>
+  - `-i` pour specifié la clef privé avec laquelle on veux se connecter
+  - `./maclef` le nom de la clef privé
+### 1.5 Sécurisez
+
+- Les attaques de type `brute-force ssh` consiste a esseyer tout les combinaison posible pour se connecter en tant qu'administrateur
+- Pour éviter ces tentatives il faut changer le parametre `PermitRootLogin` et lui attribuer l'argument `Forced-commands-only`
+
+
+
