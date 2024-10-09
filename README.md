@@ -67,3 +67,8 @@ https://blog.garamotte.net/posts/2018/01/07/fr-limit-brute-force-attacks-on-the-
 ## Processus 
 
 ### 2.1 Etude des processus UNIX
+- `ps` pour afficher les processus tournant
+<pre>    PID TTY          TIME CMD
+   2228 pts/1    00:00:00 bash
+   2267 pts/1    00:00:00 ps
+</pre>
