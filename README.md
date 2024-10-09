@@ -36,3 +36,7 @@
     ssh-copy-id username@remote_server
 </pre> 
 ### 1.3 Authentification par clef / Connection serveur
+- Pour aller dans le dossier /.ssh/ on utilise la commande
+  <pre>
+    cd ~/.ssh/
+  </pre>
