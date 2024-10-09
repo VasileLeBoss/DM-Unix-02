@@ -28,4 +28,4 @@
 <pre>
    ssh-keygen -t rsa  
 </pre>
-<p>La clef va se généré dans le dossier saisie ou par default dans (`/root/.ssh`)</p>
+  - La clef va se généré dans le dossier saisie ou par default dans (`/root/.ssh`)
