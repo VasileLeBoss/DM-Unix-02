@@ -31,25 +31,15 @@
   - La clef va se généré dans le dossier saisie ou par default dans (`/root/.ssh`)
     <pre>
       +--[ED25519 256]--+
-
 |      ..o==o    |
-
 |    . +*+o*+    |
-
 |   . +o.*.o+    |
-
 |    .o. = o     |
-
 |    . o S +     |
-
 |     . o =      |
-
 |      o o       |
-
 |       + .      |
-
 |      . o       |
-
 +-----------------+
     </pre>
 - Pour la transferer sur le serveur ssh on utilise la commande :
