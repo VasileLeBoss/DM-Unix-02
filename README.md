@@ -29,3 +29,7 @@
    ssh-keygen -t rsa  
 </pre>
   - La clef va se généré dans le dossier saisie ou par default dans (`/root/.ssh`)
+- Pour la transferer sur le serveur ssh on utilise la commande :
+<pre>
+    ssh-copy-id username@remote_server
+</pre> 
