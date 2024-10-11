@@ -167,7 +167,19 @@ MiB Éch :<b>   6173,0 </b>total,<b>   6173,0 </b>libr,<b>      0,0 </b>util.<b>
     - une interface graphique plus atirante
    
   - Les inconvénients :
-    -d
+    - d
 
 ## Arret d'un processus 
 
+- creation fishier :
+<pre>
+  touch date.sh
+</pre>
+- Modification :
+<pre>
+  nano date.sh
+</pre>
+- Execution :
+<pre>
+  ./date.sh
+</pre>
