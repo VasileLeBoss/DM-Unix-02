@@ -184,3 +184,33 @@ MiB Éch :<b>   6173,0 </b>total,<b>   6173,0 </b>libr,<b>      0,0 </b>util.<b>
   ./date.sh
 </pre>
 - Le script affiche tout les decondes en boucle toto et l'heure actuele - 5h  
+## Les tubes
+
+### Quelle est la différence entre tee et cat 
+- 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
