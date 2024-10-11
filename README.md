@@ -60,9 +60,7 @@
 - Liste blanche
   - Dans certains cas, il est possible d'établir une liste des adresses des machines ou réseaux autorisés, et d'interdire l'accès à tous les autres.
     
-**Source** : 
-
-https://blog.garamotte.net/posts/2018/01/07/fr-limit-brute-force-attacks-on-the-ssh-service.html#quelques-solutions-possibles
+**Source :** https://blog.garamotte.net/posts/2018/01/07/fr-limit-brute-force-attacks-on-the-ssh-service.html#quelques-solutions-possibles
 
 ## Processus 
 
@@ -81,6 +79,7 @@ root          10  0.0  0.0      0     0 ?        I&lt;   09:36   0:00 [mm_percpu
 root          11  0.0  0.0      0     0 ?        I    09:36   0:00 [rcu_tasks_kthread]
 </pre>
 - L'information `TIME` idique le temps d'utilisation du processeur du processus ou du thread
+**Source :** https://www.theunixschool.com/2012/09/ps-command-what-does-time-indicate.html
 
-SOURCE : https://www.theunixschool.com/2012/09/ps-command-what-does-time-indicate.html
+
 - Le processeur ayant le plus utilisé le processeur c'est le `PID 1` - aussi connu comme `init`
