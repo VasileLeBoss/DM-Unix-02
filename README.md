@@ -80,3 +80,7 @@ root           8  0.0  0.0      0     0 ?        I&lt;   09:36   0:00 [kworker/0
 root          10  0.0  0.0      0     0 ?        I&lt;   09:36   0:00 [mm_percpu_wq]
 root          11  0.0  0.0      0     0 ?        I    09:36   0:00 [rcu_tasks_kthread]
 </pre>
+- L'information `TIME` idique le temps d'utilisation du processeur du processus ou du thread
+
+SOURCE : https://www.theunixschool.com/2012/09/ps-command-what-does-time-indicate.html
+- Le processeur ayant le plus utilisé le processeur c'est le `PID 1` - aussi connu comme `init`
