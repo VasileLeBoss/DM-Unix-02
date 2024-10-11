@@ -153,4 +153,21 @@ MiB Éch :<b>   6173,0 </b>total,<b>   6173,0 </b>libr,<b>      0,0 </b>util.<b>
       5 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 slub_flushwq                     
       6 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 netns                            
       8 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker/0:0H-events_highpri      
-     10 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 mm_percpu_wq  </pre>
+     10 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 mm_percpu_wq  
+</pre>
+- La touche `Shift+M` trie les processeur par occupation mémoire decroissante.
+- Le processus le plus `gournabnd` c'est le `systemd`
+  - c'est un gestionnaire de système et de services pour les systèmes d'exploitation Linux
+- La commande interactive permettant de passer a l'affichage en couleur est `z`
+- Instalaltion htop :
+<pre>
+  apt install htop
+</pre>
+  - Les avantage :
+    - une interface graphique plus atirante
+   
+  - Les inconvénients :
+    -d
+
+## Arret d'un processus 
+
