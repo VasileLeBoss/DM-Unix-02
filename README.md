@@ -103,8 +103,54 @@ root          11  0.0  0.0      0     0 ?        I    09:36   0:00 [rcu_tasks_kt
 **Source :** https://www.theunixschool.com/2012/09/ps-command-what-does-time-indicate.html
 
 - Le processeur ayant le plus utilisé le processeur c'est le `PID 1` - aussi connu comme `init`
-- Le premier processus lancé après le démarrage du système c'est le `init`
+- Le premier processus lancé après le démarrage du système c'est le `/sbin/init `
 - La machine a démarré à `09:36`
 - Une autre commande permetant de trouver le temps depuis lequel la machine tourne est `uptime`
 <pre>14:26:52 up  7:59,  3 users,  load average: 0,00, 0,00, 0,00
 </pre>
+- Pour trouver le nombre approximatif de processus créés depuis le démarrage on utilise la commande :
+<pre>
+  root@serveur-correction:~# ps -eaf | wc -l 
+  157
+</pre> 
+- Trouver une option de la commande ps permettant d’afficher le PPID d’un processus.
+<pre>
+  ps -e | grep "NomDeProcessus"
+</pre>
+**Source :** https://www-tecmint-com.translate.goog/find-parent-process-ppid/?_x_tr_sl=en&_x_tr_tl=fr&_x_tr_hl=fr&_x_tr_pto=rq
+
+- Installation `pstree`
+<pre>
+  apt update 
+  apt install psmisc
+</pre>
+- `pstree`
+<pre>systemd─┬─cron
+        ├─dbus-daemon
+        ├─dhclient
+        ├─login───bash
+        ├─sshd───sshd───bash───pstree
+        ├─systemd───(sd-pam)
+        ├─systemd-journal
+        ├─systemd-logind
+        ├─systemd-timesyn───{systemd-timesyn}
+        └─systemd-udevd
+</pre>
+- `top`
+<pre>top - 15:10:01 up  8:42,  2 users,  load average: 0,02, 0,03, 0,00
+Tâches:<b> 154 </b>total,<b>   1 </b>en cours,<b> 153 </b>en veille,<b>   0 </b>arrêté,<b>   0 </b>zombie
+%Cpu(s):<b>  0,0 </b>ut,<b>  0,0 </b>sy,<b>  0,0 </b>ni,<b> 99,9 </b>id,<b>  0,0 </b>wa,<b>  0,0 </b>hi,<b>  0,0 </b>si,<b>  0,0 </b>st 
+MiB Mem :<b>   9942,8 </b>total,<b>   9421,4 </b>libr,<b>    395,8 </b>util,<b>    365,9 </b>tamp/cache     
+MiB Éch :<b>   6173,0 </b>total,<b>   6173,0 </b>libr,<b>      0,0 </b>util.<b>   9547,0 </b>dispo Mem 
+
+<span style="background-color:#000000"><span style="color:#FFFFFF">    PID UTIL.     PR  NI    VIRT    RES    SHR S  %CPU  %MEM    TEMPS+ COM.                             </span></span>
+<b>   3155 root      20   0   11740   5548   3372 R   0,7   0,1   0:00.08 top                              </b>
+    176 root      20   0       0      0      0 I   0,3   0,0   0:20.14 kworker/7:1-events_power_effici+ 
+      1 root      20   0  168884  13568   9228 S   0,0   0,1   0:02.41 systemd                          
+      2 root      20   0       0      0      0 S   0,0   0,0   0:00.01 kthreadd                         
+      3 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 rcu_gp                           
+      4 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 rcu_par_gp                       
+      5 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 slub_flushwq                     
+      6 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 netns                            
+      8 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 kworker/0:0H-events_highpri      
+     10 root       0 -20       0      0      0 I   0,0   0,0   0:00.00 mm_percpu_wq  </pre>
