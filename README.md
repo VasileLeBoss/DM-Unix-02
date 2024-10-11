@@ -51,7 +51,27 @@
 
 - Les attaques de type `brute-force ssh` consiste a esseyer tout les combinaison posible pour se connecter en tant qu'administrateur
 - Pour éviter ces tentatives il faut changer le parametre `PermitRootLogin` et lui attribuer l'argument `Forced-commands-only`. Cela va permettre de ce connecter en tant qu'administrateur uniqument avec la clef privé.
-  
+
+  `OU`
+
+- Utilisation de `fail2ban`
+<pre>
+  apt-get install fail2ban
+</pre>
+  - Editer : /etc/fail2ban/jail.conf
+<pre>
+  [ssh] enabled = true 
+  port = ssh 
+  filter = sshd 
+  action = iptables[name=SSH, port=ssh, protocol=tcp] 
+  logpath = /var/log/auth.log
+  maxretry = 3 
+  bantime = 900
+</pre>
+  - Et enfin redemarrer le service
+<pre>
+  service fail2ban restart
+</pre>
 **Autre techniques**
 - Changer le port
   - C'est une modification très simple, qui permet d'éviter un bon nombre d'attaques, puisque certains robots ne     tentent de se connecter que sur le port par défaut.
