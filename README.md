@@ -82,5 +82,9 @@ root          11  0.0  0.0      0     0 ?        I    09:36   0:00 [rcu_tasks_kt
 
 **Source :** https://www.theunixschool.com/2012/09/ps-command-what-does-time-indicate.html
 
-
 - Le processeur ayant le plus utilisé le processeur c'est le `PID 1` - aussi connu comme `init`
+- Le premier processus lancé après le démarrage du système c'est le `init`
+- La machine a démarré à `09:36`
+- Une autre commande permetant de trouver le temps depuis lequel la machine tourne est `uptime`
+<pre>14:26:52 up  7:59,  3 users,  load average: 0,00, 0,00, 0,00
+</pre>
