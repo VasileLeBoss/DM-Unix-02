@@ -187,8 +187,12 @@ MiB Éch :<b>   6173,0 </b>total,<b>   6173,0 </b>libr,<b>      0,0 </b>util.<b>
 ## Les tubes
 
 ### Quelle est la différence entre tee et cat 
-- 
+- `cat` (pour "concatenate") est utilisé principalement pour lire le contenu d'un fichier et l'afficher dans le terminal. Il permet aussi de concaténer plusieurs fichiers, c’est-à-dire de les combiner, pour afficher leur contenu ensemble ou rediriger la sortie vers un autre fichier.<
 
+**Exemple**
+<pre>
+  cat fichier1.txt fichier2.txt > combiné.txt
+</pre>
 
 
 
