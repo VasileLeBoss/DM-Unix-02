@@ -247,17 +247,42 @@ Contenu du fichier `liste`
 
 ## Journal système rsyslog
 
+**rsyslog**
+- Pour verifier si le service est lancé on utilise la commande `systemctl status rsyslog` et pour savoir son PID `pidof rsyslog`
+- Les messages système standards sont souvent écrits dans le fichier `/var/log/syslog`
+- Pour verifier ces fichiers on peut les ouvrir avec `tail -f /var/log/syslog`
 
+**source :** https://linux.die.net/man/1/tail
 
+**cron**
+- `cron` permet d'exécuter automatiquement des scripts ou des commandes à des moments spécifiques, suivant un calendrier défini dans des fichiers de configuration appelés `crontabs`
 
+**tail -f**
+- permet d'afficher les dernières lignes d'un fichier et de mettre à jour dynamiquement l'affichage en temps réel 
+- pour visualiser le contenu de `/var/log/messages` et temp réel :
+<pre>
+  tail -f /var/log/messages
+</pre>
+- redémarrer le service cron
+<pre>
+  sudo systemctl restart cron
+</pre>
 
+- Dans le terminal on verra les logs liées au redémarrage de cron
 
+### À quoi sert le fichier /etc/logrotate.conf 
+- Le fichier `/etc/logrotate.conf` sert à configurer le comportement de l'outil logrotate, qui est utilisé pour gérer la rotation, la compression et la suppression des fichiers de log. Il permet d'éviter que les fichiers de logs deviennent trop volumineux en les scindant périodiquement et en supprimant ou archivant les anciens fichiers.
 
-
-
-
-
-
+**dmesg**
+- La commande `dmesg` affiche les messages du buffer de la mémoire noyau, liés au matériel détecté lors du démarrage.
+- Linux détecte le processeur de ma machine hôte
+<pre>
+  [0.000000] CPU: Intel(R) Core(R) i7-4770 CPU  @3.40GHz
+</pre>
+- Et la carte réseau émulées
+<pre>
+  [1.234567] virtio_net: Virtio network device
+</pre>
 
 
 
