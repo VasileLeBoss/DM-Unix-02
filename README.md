@@ -218,23 +218,30 @@ MiB Éch :<b>   6173,0 </b>total,<b>   6173,0 </b>libr,<b>      0,0 </b>util.<b>
   -rw-r--r-- 1 root root  2048 Oct 14 10:02 fichier2.txt
 </pre> 
 
--`ls -l | tee liste` envoie la sortie à deux endroits en même temps : elle l'affiche sur le terminal et l'écrit dans le fichier liste. 
+- `ls -l | tee liste` envoie la sortie à deux endroits en même temps : elle l'affiche sur le terminal et l'écrit dans le fichier liste. 
 
-**output :** Affichage à l'écran :
+**output :** 
 
+Affichage à l'écran :
 <pre>
   -rw-r--r-- 1 user user  1024 Oct 14 10:00 fichier1.txt
   -rw-r--r-- 1 user user  2048 Oct 14 10:02 fichier2.txt
 </pre>
 
 Contenu du fichier `liste`
-
 <pre>
   -rw-r--r-- 1 user user  1024 Oct 14 10:00 fichier1.txt
   -rw-r--r-- 1 user user  2048 Oct 14 10:02 fichier2.txt
 </pre>
 
+- `ls -l | tee liste | wc -l` va lister les fishiers avec les détails > tee liste affiche cette sortie dans le terminal et l'enregistre dans le fichier liste  > wc -l affiche ke nombre total de lignes dans cette sortie
 
+**output :** 
+<pre>
+    -rw-r--r-- 1 user user  1024 Oct 14 10:00 fichier1.txt
+    -rw-r--r-- 1 user user  2048 Oct 14 10:02 fichier2.txt
+    2
+</pre>
 
 
 
