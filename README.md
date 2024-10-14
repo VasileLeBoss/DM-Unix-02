@@ -187,16 +187,21 @@ MiB Éch :<b>   6173,0 </b>total,<b>   6173,0 </b>libr,<b>      0,0 </b>util.<b>
 ## Les tubes
 
 ### Quelle est la différence entre tee et cat 
-- `cat` (pour "concatenate") est utilisé principalement pour lire le contenu d'un fichier et l'afficher dans le terminal. Il permet aussi de concaténer plusieurs fichiers, c’est-à-dire de les combiner, pour afficher leur contenu ensemble ou rediriger la sortie vers un autre fichier.<
+- `cat` est utilisé principalement pour lire le contenu d'un fichier et l'afficher dans le terminal. Il permet aussi de concaténer plusieurs fichiers pour afficher leur contenu ensemble ou rediriger la sortie vers un autre fichier.
 
 **Exemple**
 <pre>
   cat fichier1.txt fichier2.txt > combiné.txt
 </pre>
 
+- `tee` lit depuis l'entrée standard et envoie simultanément le résultat à la sortie standard (l’écran) et dans un fichier.
 
+**Exemple**
+<pre>
+  echo "Bonjour" | tee fichier.txt
+</pre>
 
-
+**Source :** https://linux.die.net/man/1/tee 
 
 
 
