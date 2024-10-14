@@ -203,6 +203,8 @@ MiB Éch :<b>   6173,0 </b>total,<b>   6173,0 </b>libr,<b>      0,0 </b>util.<b>
 
 **Source :** https://linux.die.net/man/1/tee 
 
+
+### Que font les commandes suivantes 
 - `ls | cat` afficher simplement le résultat de la commande ls car `cat` ne modifie pas la sortie.
 
 **output :**
@@ -243,7 +245,7 @@ Contenu du fichier `liste`
     2
 </pre>
 
-
+## Journal système rsyslog
 
 
 
