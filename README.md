@@ -11,16 +11,16 @@
 - Les argument posible sont :
   - Yes : Connexion root posible avec un mdp
     - Avantages : Connexion root facile
-    - Incovénients:   
+    - Incovénients: Permettre la connexion root avec un mot de passe rend le système vulnérable aux attaques par force brute.
   - No : Connexion root imposible
     - Avantages : Aucun risque de sécurité
-    - Incovénients:
+    - Incovénients: Moins pratique
   - Prohibit-password (default) : Le mdp et le 'keyboard-interactive authentification' sont désactivé
-    - Avantages : 
-    - Incovénients :  
+    - Avantages : Seules les connexions SSH avec clés publiques sont autorisées
+    - Incovénients : on doit configurer des clés SSH avant de pouvoir te connecter en tant que root
   - Forced-commands-only : Permet le login root avec une clef d'autentification public (Uniquement si l'option 'command' a été spécifiée)
-    - Avantages :
-    - Incovénients :
+    - Avantages : Accès root uniquement avec des clés SSH
+    - Incovénients : La connexion root n'est possible que pour des commandes spécifiques, ce qui peut être restrictif pour des tâches d'administration générales
    
 ### 1.2 Authentification par clef / Génération de clefs
 
